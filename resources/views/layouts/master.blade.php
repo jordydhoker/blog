@@ -5,13 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Laravel</title>
-    <link rel="stylesheet" href="{{ URL::to('css/styles.css') }}">
+    <link rel="stylesheet" href="{{ URL::to('css/app.css') }}">
 </head>
 <body>
-@include('partials.header')
 
-<div class="container">
+
     @yield('content')
-</div>
+
 </body>
 </html>

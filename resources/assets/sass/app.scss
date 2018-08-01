@@ -1,14 +1,35 @@
 
 // Fonts
-@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
-// Variables
 @import "variables";
+@import "reset";
 
-// Bootstrap
-@import '~bootstrap/scss/bootstrap';
 
-.navbar-laravel {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+
+body{
+  background-color: $body-bg;
 }
+header{
+  height: $header-height;
+  background-color: $header-bg;
+}
+main{
+  margin-top: $header-height;
+  padding: 1em;
+  overflow: hidden;
+  width: 100%;
+}
+.masonry { //http://w3bits.com/css-masonry/
+  column-count: 4;
+  column-gap: 1em;
+  width: 100%;
+  article{
+    background-color: $article-bg;
+    display: inline-block;
+    margin: 0 0 1em;
+    padding: 1em;
+    width: 100%;
+  }
+}
+

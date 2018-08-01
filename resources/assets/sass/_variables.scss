@@ -1,8 +1,13 @@
 
 // Body
-$body-bg: #f5f8fa;
+$body-bg: #550000;
+
+//Colors
+$article-bg : rgba(255,255,255,0.1);
+$header-bg : rgba(255,255,255,0.2);
+
+// Layout
+$header-height: 100px;
 
 // Typography
-$font-family-sans-serif: "Raleway", sans-serif;
-$font-size-base: 0.9rem;
-$line-height-base: 1.6;
+$font-family-sans-serif: "Roboto", sans-serif;
