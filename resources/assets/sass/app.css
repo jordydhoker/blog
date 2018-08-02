@@ -119,14 +119,14 @@ article {
     column-count: 3; } }
 @media only screen and (max-width: 1000px) {
   .masonry {
-    column-count: 2; } }
-@media only screen and (max-width: 500px) {
-  .masonry {
-    column-count: 1; }
+    column-count: 2; }
 
   .about {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas: "about" "contact" "contactform"; } }
+@media only screen and (max-width: 500px) {
+  .masonry {
+    column-count: 1; } }
 
 /*# sourceMappingURL=app.css.map */

@@ -14,3 +14,13 @@
 Route::get('/', function () {
     return view('content.index');
 });
+/*Route::get('/', [
+    'uses' => 'ItemController@getIndex',
+    'as' => 'content.index'
+]);*/
+Route::get('about', function () {
+    return view('other.about');
+})->name('other.about');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
