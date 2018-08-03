@@ -42,10 +42,6 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-body {
-  background-color: #e2e1e0;
-  font-family: "Roboto", sans-serif; }
-
 header {
   height: 60px;
   background-color: #fcfcfc;
@@ -73,27 +69,16 @@ header {
         height: 40px;
         width: 40px; }
 
-.about {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas: "about contact" "contactform contactform";
-  grid-gap: 20px; }
-  .about div {
-    background-color: #ffffff;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-    padding: 20px; }
-  .about .contactform {
-    grid-area: contactform; }
-
-main {
-  padding: 80px 20px 20px 20px;
-  width: 100%; }
+body {
+  background-color: #e2e1e0;
+  font-family: "Roboto", sans-serif; }
 
 article {
   background-color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  border-radius: 2px;
   display: inline-block;
   word-wrap: break-word;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   margin: 0 0 20px;
   width: 100%; }
@@ -109,24 +94,20 @@ article {
   article p {
     padding: 20px; }
 
-.masonry {
+.masonry-home {
   column-count: 4;
   column-gap: 20px;
-  width: 100%; }
+  width: 100%;
+  padding: 80px 20px 20px 20px; }
 
 @media only screen and (max-width: 1500px) {
-  .masonry {
+  .masonry-home {
     column-count: 3; } }
 @media only screen and (max-width: 1000px) {
-  .masonry {
+  .masonry-home {
     column-count: 2; } }
 @media only screen and (max-width: 500px) {
-  .masonry {
-    column-count: 1; }
-
-  .about {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas: "about" "contact" "contactform"; } }
+  .masonry-home {
+    column-count: 1; } }
 
 /*# sourceMappingURL=app.css.map */

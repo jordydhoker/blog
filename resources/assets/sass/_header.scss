@@ -1,0 +1,38 @@
+@import "variables";
+
+
+header {
+  height: $header-height;
+  background-color: $header-bg;
+  box-shadow: $header-shadow;
+  position: fixed;
+  width: 100%;
+
+  nav {
+    height: $header-height;
+
+    display: grid;
+    grid-template-columns: 1fr auto auto auto auto auto auto;
+    padding-right: $margin;
+    a {
+      height: $header-height;
+      font-size: $header-height/3;
+      padding: $header-height/3;
+      text-decoration: none;
+      color: $link-color;
+      transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+      &:not(.logo):hover, &:not(.logo):active {
+        background-color: $body-bg;
+
+      }
+    }
+    .logo {
+      justify-self: start;
+      padding: $margin/2 $margin;
+      img {
+        height: $header-height - $margin;
+        width: $header-height - $margin;
+      }
+    }
+  }
+}

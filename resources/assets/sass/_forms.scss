@@ -1,0 +1,50 @@
+@import "variables";
+
+
+.about{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "about contact"
+  "contactform contactform";
+  grid-gap: $margin;
+  div{
+    @include blockstyle();
+  }
+
+  .contactform{
+    grid-area: contactform;
+  }
+}
+.login{
+  max-width: 500px;
+  div{
+  padding: $margin;
+    @include blockstyle();
+}
+}
+form{
+  h3{
+    font-size: $h3;
+  }
+  input{
+    width: 100%;
+    background-color: $form-bg;
+    border-radius: $border-radius;
+    padding: 10px;
+  }
+  .submit{
+    background-color: $accent-color;
+  }
+  input[type='file']{
+
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+
+  .about {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "about" "contact" "contactform";
+  }
+}

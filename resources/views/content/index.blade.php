@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
-        <main class="masonry">
+        <main class="masonry-home">
             <article><h3>testmaatie</h3>
                 <img src="http://via.placeholder.com/500x1000">
                 <p>testevougnwpkercgbahbfoxaoscgnaxrigxlcjhsbakhxbkscdbnsxbcjvbcdmcgxcvncsdvoguwcgaiergxmscbgosdiuhvg</p>

@@ -5,7 +5,10 @@ $body-bg: #e2e1e0;
 //Colors
 $article-bg : #ffffff;
 $header-bg: #fcfcfc;
+$form-bg: #eeeeee;
 $link-color: #000000;
+
+$accent-color: #6464cc;
 
 // Layout
 $header-height: 60px;
@@ -21,3 +24,10 @@ $font-stack: "Roboto", sans-serif;
 $h1: 30px;
 $h2: 25px;
 $h3: 20px;
+
+// Article
+@mixin blockstyle(){
+  background-color: $article-bg;
+  box-shadow: $article-shadow;
+  border-radius: $border-radius;
+}
