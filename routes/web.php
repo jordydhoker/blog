@@ -14,6 +14,9 @@
 Route::get('/', function () {
     return view('content.index');
 });
+Route::get('index', function () {
+    return view('content.index');
+})->name('index');
 /*Route::get('/', [
     'uses' => 'ItemController@getIndex',
     'as' => 'content.index'
@@ -38,4 +41,3 @@ Route::resource('posts','PostController');
 Auth::routes();
 
 
-Route::get('/home', 'HomeController@index')->name('home');

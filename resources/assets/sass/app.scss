@@ -5,15 +5,13 @@
 @import "variables";
 @import "reset";
 @import "header";
+@import "forms";
 
 
 body{
   background-color: $body-bg;
   font-family: $font-stack;
 }
-
-
-
 
 article{
   @include blockstyle();
@@ -45,6 +43,28 @@ article{
   column-gap: $margin;
   width: 100%;
   padding: $header-height+$margin $margin $margin $margin;
+}
+
+.showPost{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "post post"
+  "like share";
+  grid-gap: $margin;
+  max-width: 1000px;
+  padding: $header-height+$margin $margin $margin $margin;
+  margin: 0 auto;
+  div{
+    padding: $margin;
+    @include blockstyle();
+  }
+  .post{
+    grid-area: post;
+  }
+  .description{
+    font-weight: 700;
+    margin-bottom: $margin;
+  }
 }
 
 

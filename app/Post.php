@@ -17,4 +17,8 @@ class Post extends Model
     {
         return $this->hasMany('App\Share', 'post_id');
     }
+    public function post()
+    {
+        return $this->belongsTo('App\User', 'user_id');
+    }
 }

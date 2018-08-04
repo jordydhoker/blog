@@ -7,33 +7,84 @@
   grid-template-areas: "about contact"
   "contactform contactform";
   grid-gap: $margin;
+  padding: $header-height+$margin $margin $margin $margin;
+  max-width: 1000px;
+  margin: 0 auto;
   div{
     @include blockstyle();
+    padding: $margin;
   }
 
   .contactform{
     grid-area: contactform;
   }
 }
+
+
 .login{
   max-width: 500px;
+  padding: $header-height+$margin $margin $margin $margin;
+  margin: 0 auto;
   div{
   padding: $margin;
     @include blockstyle();
 }
 }
+
+.createPost{
+  max-width: 1000px;
+  padding: $header-height+$margin $margin $margin $margin;
+  margin: 0 auto;
+  div{
+    padding: $margin;
+    @include blockstyle();
+    margin-bottom: $margin;
+  }
+}
+
+.blue-link{
+  margin-top: 10px;
+  text-decoration: none;
+}
+
+
+
+
+
 form{
-  h3{
+  label{
     font-size: $h3;
   }
-  input{
+  input,textarea{
     width: 100%;
     background-color: $form-bg;
     border-radius: $border-radius;
     padding: 10px;
+    margin: 10px 0 20px 0;
+  }
+  textarea{
+    resize: none;
+    margin: 10px 0 0 0;
+  }
+  #description{
+    min-height: 100px;
+  }
+  #body{
+    min-height:500px;
+    resize: vertical;
+  }
+
+  span{
+    width: 100%;
+    display:block;
+    color: red;
+  }
+  .checkbox{
+    width: auto;
   }
   .submit{
     background-color: $accent-color;
+    margin: 0;
   }
   input[type='file']{
 
