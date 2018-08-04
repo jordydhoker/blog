@@ -11,32 +11,16 @@
 |
 */
 
-Route::get('/', function () {
-    return view('content.index');
-});
-Route::get('index', function () {
-    return view('content.index');
-})->name('index');
-/*Route::get('/', [
-    'uses' => 'ItemController@getIndex',
-    'as' => 'content.index'
-]);*/
+Route::get('/', [
+    'uses' => 'PostController@index',
+    'as' => 'posts.index'
+]);
 Route::get('about', function () {
     return view('other.about');
 })->name('other.about');
 
 Route::resource('posts','PostController');
 
-
-/* Authentication Routes
- Route::get('auth/login', 'Auth\LoginController@getLogin');
- Route::post('auth/login', 'Auth\LoginController@postLogin');
- Route::get('auth/logout', 'Auth\LoginController@getLogout');
-
- // Registration Routes
-  Route::get('auth/register', 'Auth\RegisterController@getRegister');
-  Route::post('auth/register', 'Auth\RegisterController@postRegister');
-*/
 
 Auth::routes();
 

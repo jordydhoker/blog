@@ -20,6 +20,7 @@ article{
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
   margin: 0 0 $margin;
   width: 100%;
+  color: black;
 
   &:hover{
     box-shadow: $article-shadow-hover;

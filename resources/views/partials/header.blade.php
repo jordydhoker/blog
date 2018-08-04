@@ -1,7 +1,7 @@
 <header>
     <nav>
-        <a class="logo" href="{{route('index')}}"><img src="http://via.placeholder.com/100x100"></a>
-        <a href="{{route('index')}}">Home</a>
+        <a class="logo" href="{{route('posts.index')}}"><img src="http://via.placeholder.com/100x100"></a>
+        <a href="{{route('posts.index')}}">Home</a>
         <a href=" {{route('other.about')}}">About</a>
         <a href="">Admin</a>
 

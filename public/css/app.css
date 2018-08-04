@@ -153,7 +153,8 @@ article {
   word-wrap: break-word;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   margin: 0 0 20px;
-  width: 100%; }
+  width: 100%;
+  color: black; }
   article:hover {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); }
   article h3 {
@@ -188,7 +189,8 @@ article {
   .showPost .post {
     grid-area: post; }
   .showPost .description {
-    font-weight: 700; }
+    font-weight: 700;
+    margin-bottom: 20px; }
 
 @media only screen and (max-width: 1500px) {
   .masonry-home {

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Post;
+use App\User;
 use Illuminate\Support\Facades\Auth;
 
 class PostController extends Controller
@@ -16,7 +17,14 @@ class PostController extends Controller
     public function index()
     {
         $posts = Post::all();
-        return view('index')->withPosts($posts);
+        $users = User::all();
+        return view('posts.index')->withPosts($posts)->withUsers($users);
+    }
+
+    public function getPostsByUserId($id){
+        $posts = Post::where('user_id', $id);
+        $user = User::find($id);
+        return view('posts.profile')->withPosts($posts)->withUser($user);
     }
 
     /**
