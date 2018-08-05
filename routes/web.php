@@ -51,6 +51,18 @@ Route::group(['prefix' => 'shares'], function () {
 
 });
 
+Route::group(['prefix' => 'seed'], function () {
+    Route::get('users', [
+        'uses' => 'UsersTableSeeder@run',
+        'as' => 'seed.users'
+    ]);
+    Route::get('posts', [
+        'uses' => 'PostsTableSeeder@run',
+        'as' => 'seed.posts'
+    ]);
+
+});
+
 //Route::resource('posts','PostController');
 //Route::resource('likes','LikeController');
 

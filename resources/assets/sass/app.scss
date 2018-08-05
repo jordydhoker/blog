@@ -56,6 +56,37 @@ article{
   width: 100%;
   padding: $header-height+$margin $margin $margin $margin;
 }
+
+.pagination{
+  @include blockstyle();
+  margin: 0 auto $margin auto;
+  display: grid;
+  width: 500px;
+  grid-template-columns: 60px 60px 60px 60px 60px;
+  grid-template-rows: 60px;
+  justify-content: center;
+  align-content: center;
+  .active{
+    background-color: $accent-color;
+  }
+  .disabled{
+    color:gray;
+  }
+  .page-item:hover{
+    background-color: gray;
+  }
+  li{
+    vertical-align: middle;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    .page-link{
+      padding: $margin;
+      color: black;
+      text-decoration: none;
+    }
+  }
+}
 .profile{
   column-count: 2;
   column-gap: $margin;

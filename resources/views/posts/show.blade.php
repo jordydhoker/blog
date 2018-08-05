@@ -15,7 +15,7 @@
     <p>{{$post->likes()->count()}} Likes</p>
     <p>{{$post->shares()->count()}} Shares</p>
 </article>
-
+        @if (!Auth::guest())
         @if ($post->likes()->where('user_id', Auth::id())->first())
             <a href="{{route('likes.destroy', $post->id)}}"><div class="liked">Unlike</div></a>
             @else
@@ -29,6 +29,8 @@
         <div>Edit</div>
 
         <a href="{{route('posts.destroy', $post->id)}}"><div>Delete</div></a>
+        @endif
+
         @endif
     </main>
 
