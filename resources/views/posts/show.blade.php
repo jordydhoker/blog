@@ -3,7 +3,8 @@
 @section('content')
     <main class="showPost">
 
-<div class="post">
+<article>
+    <a href="{{route('posts.profile', $post->user_id)}}"><h3>{{$post->user->name}}</h3></a>
     <p class="description">
         {{ $post->description }}
     </p>
@@ -11,7 +12,7 @@
         {{ $post->body }}
 
     </p>
-</div>
+</article>
         <div>Like</div>
         <div>Share</div>
 

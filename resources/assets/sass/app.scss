@@ -17,17 +17,22 @@ article{
   @include blockstyle();
   display: inline-block;
   word-wrap: break-word;
-  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+
   margin: 0 0 $margin;
   width: 100%;
   color: black;
 
-  &:hover{
-    box-shadow: $article-shadow-hover;
+
+  a{
+    text-decoration: none;
   }
   h3{
     font-size: $h3;
     padding: $margin;
+    border-bottom: 1px solid gray;
+    color: black;
+
+    font-weight: 700;
   }
 
   img{
@@ -39,10 +44,23 @@ article{
     padding: $margin;
   }
 }
+.linkArticle {
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  &:hover {
+    box-shadow: $article-shadow-hover;
+  }
+}
 .masonry-home { //http://w3bits.com/css-masonry/
   column-count: 4;
   column-gap: $margin;
   width: 100%;
+  padding: $header-height+$margin $margin $margin $margin;
+}
+.profile{
+  column-count: 2;
+  column-gap: $margin;
+  max-width: 1000px;
+  margin: 0 auto;
   padding: $header-height+$margin $margin $margin $margin;
 }
 
@@ -59,12 +77,12 @@ article{
     padding: $margin;
     @include blockstyle();
   }
-  .post{
+  article{
     grid-area: post;
+    margin: 0;
   }
   .description{
     font-weight: 700;
-    margin-bottom: $margin;
   }
 }
 

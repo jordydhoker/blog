@@ -10,7 +10,7 @@
             <a href="{{ route('login') }}">Login</a>
             <a href="{{ route('register') }}">Register</a>
         @else
-            <a href="">Profile</a>
+            <a href="{{route('posts.profile', Auth::id())}}">Profile</a>
             <a href="{{route('posts.create')}}">New Post</a>
 
             <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">

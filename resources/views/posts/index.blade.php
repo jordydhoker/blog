@@ -4,7 +4,7 @@
         <main class="masonry-home">
             @foreach($posts as $post)
             <a href="{{route('posts.show',$post->id)}}">
-            <article><h3>{{$post->user->name}}</h3>
+            <article class="linkArticle"><h3>{{$post->user->name}}</h3>
                 <p>{{$post->description}}</p>
             </article>
             </a>

@@ -16,15 +16,16 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::all();
+        $posts = Post::orderBy('created_at', 'desc')->get();
         $users = User::all();
         return view('posts.index')->withPosts($posts)->withUsers($users);
     }
 
-    public function getPostsByUserId($id){
-        $posts = Post::where('user_id', $id);
+    public function profile($id){
+
         $user = User::find($id);
-        return view('posts.profile')->withPosts($posts)->withUser($user);
+        $posts = $user->posts;
+        return view('posts.profile', ['posts' => $posts, 'user' => $user]);
     }
 
     /**

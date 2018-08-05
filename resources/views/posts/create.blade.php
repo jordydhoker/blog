@@ -10,7 +10,7 @@
 
                 <div>
                 <label for="description">Description</label>
-                <textarea id="description" name="description" required autofocus maxlength="200"></textarea>
+                <textarea id="description" name="description" required autofocus maxlength="280"></textarea>
                 </div>
 
 

@@ -15,6 +15,14 @@ Route::get('/', [
     'uses' => 'PostController@index',
     'as' => 'posts.index'
 ]);
+Route::get('index', [
+    'uses' => 'PostController@index',
+    'as' => 'posts.index'
+]);
+Route::get('profile/{id}', [
+    'uses' => 'PostController@profile',
+    'as' => 'posts.profile'
+]);
 Route::get('about', function () {
     return view('other.about');
 })->name('other.about');
