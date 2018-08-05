@@ -76,6 +76,15 @@ article{
   div{
     padding: $margin;
     @include blockstyle();
+    text-align: center;
+    text-transform: uppercase;
+
+  }
+  a{
+    text-decoration: none;
+  }
+  .liked{
+    background-color: $accent-color;
   }
   article{
     grid-area: post;

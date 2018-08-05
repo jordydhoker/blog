@@ -27,8 +27,70 @@ Route::get('about', function () {
     return view('other.about');
 })->name('other.about');
 
-Route::resource('posts','PostController');
+Route::group(['prefix' => 'likes'], function () {
+    Route::get('store/{id}', [
+        'uses' => 'LikeController@store',
+        'as' => 'likes.store'
+    ]);
+    Route::get('destroy/{id}', [
+        'uses' => 'LikeController@destroy',
+        'as' => 'likes.destroy'
+    ]);
+});
 
+
+Route::group(['prefix' => 'shares'], function () {
+    Route::get('store/{id}', [
+        'uses' => 'ShareController@store',
+        'as' => 'shares.store'
+    ]);
+    Route::get('destroy/{id}', [
+        'uses' => 'ShareController@destroy',
+        'as' => 'shares.destroy'
+    ]);
+
+});
+
+//Route::resource('posts','PostController');
+//Route::resource('likes','LikeController');
+
+
+Route::group(['prefix' => 'posts'], function (){
+    Route::get('', [
+        'uses' => 'PostController@index',
+        'as' => 'posts.index'
+    ]);
+    //Create new item pagina
+    Route::get('create', [
+        'uses' => 'PostController@create',
+        'as' => 'posts.create'
+    ]);
+
+    Route::get('show/{id}', [
+        'uses' => 'PostController@show',
+        'as' => 'posts.show'
+    ]);
+    //POST  New item
+    Route::post('store', [
+        'uses' => 'PostController@store',
+        'as' => 'posts.store'
+    ]);
+    //Edit item pagina
+    Route::get('edit/{id}', [
+        'uses' => 'PostController@edit',
+        'as' => 'posts.edit'
+    ]);
+    //POST edited item
+    Route::post('edit', [
+        'uses' => 'PostController@update',
+        'as' => 'posts.update'
+    ]);
+    //Delete een item
+    Route::get('destroy/{id}', [
+        'uses' => 'PostController@destroy',
+        'as' => 'posts.destroy'
+    ]);
+});
 
 Auth::routes();
 
