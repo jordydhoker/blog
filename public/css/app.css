@@ -239,6 +239,27 @@ article {
   .showPost .description {
     font-weight: 700; }
 
+.dashboardMain {
+  width: 100%;
+  padding: 80px 20px 20px 20px;
+  margin: 0 auto; }
+  .dashboardMain div {
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    border-radius: 2px;
+    margin-bottom: 20px; }
+  .dashboardMain table {
+    width: 100%; }
+  .dashboardMain th, .dashboardMain td {
+    padding: 10px; }
+  .dashboardMain th {
+    background-color: lightgray;
+    font-weight: 700;
+    text-align: left; }
+  .dashboardMain tr {
+    border-bottom: 1px solid gray; }
+
 @media only screen and (max-width: 1500px) {
   .masonry-home {
     column-count: 3; } }

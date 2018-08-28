@@ -19,6 +19,7 @@ class CreatePostsTable extends Migration
             $table->text('description',280);
             $table->text('body');
             $table->integer('user_id');
+            $table->softDeletes();
             //$table->('picture');
         });
     }

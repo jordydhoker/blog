@@ -127,6 +127,33 @@ article{
 }
 
 
+.dashboardMain{
+  width:100%;
+  padding: $header-height+$margin $margin $margin $margin;
+  margin: 0 auto;
+  div{
+    padding: $margin;
+    @include blockstyle();
+    margin-bottom: $margin;
+  }
+  table{
+    width: 100%;
+  }
+  th,td{
+    padding: $margin/2;
+  }
+  th{
+    background-color: lightgray;
+    font-weight: 700;
+    text-align: left;
+  }
+  tr{
+    border-bottom: 1px solid gray;
+  }
+
+}
+
+
 
 @media only screen and (max-width: 1500px) {
   .masonry-home{

@@ -23,9 +23,15 @@ Route::get('profile/{id}', [
     'uses' => 'PostController@profile',
     'as' => 'posts.profile'
 ]);
+Route::get('dashboard', [
+    'uses' => 'PostController@dashboard',
+    'as' => 'posts.dashboard'
+]);
 Route::get('about', function () {
     return view('other.about');
 })->name('other.about');
+
+
 
 Route::group(['prefix' => 'likes'], function () {
     Route::get('store/{id}', [
@@ -37,6 +43,8 @@ Route::group(['prefix' => 'likes'], function () {
         'as' => 'likes.destroy'
     ]);
 });
+
+
 
 
 Route::group(['prefix' => 'shares'], function () {
@@ -51,6 +59,9 @@ Route::group(['prefix' => 'shares'], function () {
 
 });
 
+
+
+
 Route::group(['prefix' => 'seed'], function () {
     Route::get('users', [
         'uses' => 'UsersTableSeeder@run',
@@ -63,8 +74,23 @@ Route::group(['prefix' => 'seed'], function () {
 
 });
 
-//Route::resource('posts','PostController');
-//Route::resource('likes','LikeController');
+
+
+
+Route::group(['prefix' => 'users'], function () {
+    Route::get('edit/{id}', [
+        'uses' => 'UserController@edit',
+        'as' => 'users.edit'
+    ]);
+    Route::get('destroy/{id}', [
+        'uses' => 'UserController@destroy',
+        'as' => 'users.destroy'
+    ]);
+
+});
+
+
+
 
 
 Route::group(['prefix' => 'posts'], function (){
@@ -93,11 +119,16 @@ Route::group(['prefix' => 'posts'], function (){
         'as' => 'posts.edit'
     ]);
     //POST edited item
-    Route::post('edit', [
+    Route::post('update/{id}', [
         'uses' => 'PostController@update',
         'as' => 'posts.update'
     ]);
-    //Delete een item
+    //Soft delete een item
+    Route::get('delete/{id}', [
+        'uses' => 'PostController@delete',
+        'as' => 'posts.delete'
+    ]);
+    //Hard delete een item
     Route::get('destroy/{id}', [
         'uses' => 'PostController@destroy',
         'as' => 'posts.destroy'
